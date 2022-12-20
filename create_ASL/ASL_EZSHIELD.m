@@ -2,10 +2,8 @@ clear;
 close all;
 clc;
 
-EZSHIELD = load('./nonrotated/geometry/EZSHIELD.dat');
-
+EZSHIELD = load('../nonrotated/geometry/EZSHIELD.dat');
 EZSHIELD(find(EZSHIELD(:,1) == 0 ),:) = [];
-
 EZSHIELD_moving = EZSHIELD;
 
 % EXSHIELD_moving(find(EXSHIELD_moving(:,2) >= 97),:) = [];
