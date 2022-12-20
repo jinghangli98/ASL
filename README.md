@@ -1,1 +1,2 @@
-# Arterial Spin Labeling Coil Simulation
+# Arterial Spin Labeling (ASL) 
+Coil Simulation
