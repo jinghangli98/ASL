@@ -2,7 +2,7 @@ clear;
 close all;
 clc;
 
-EXSTRUT = load('./nonrotated/geometry/EXSTRUT.dat');
+EXSTRUT = load('../nonrotated/geometry/EXSTRUT.dat');
 EXSTRUT_moving = EXSTRUT;
 
 EXSTRUT_moving(find(EXSTRUT_moving(:,3) >= 172),:) = [];
