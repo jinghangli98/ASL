@@ -10,7 +10,6 @@ EXSTRUT = load('../nonrotated/geometry/EXSTRUT.dat');
 XCapacitance_moving = XCapacitance(:,1:3);
 % XCapacitance_moving = [EXSTRUT; XCapacitance_moving];
 XCapacitance_moving = [XCapacitance_moving];
-plot3d(XCapacitance_moving)
 XCapacitance_moving(find(XCapacitance_moving(:,3) >= 172),:) = [];
 
 moving = zeros(max(XCapacitance_moving(:,1)), max(XCapacitance_moving(:,2)), max(XCapacitance_moving(:,3)));
@@ -35,8 +34,16 @@ rotated = imwarp(moving, Rin, tform);
 rotated = [x + 36 + (99-95), y + (219-176) + (213-173), z-76-6];
 rotated(find(rotated(:,2) <= 161 ),:) = [];
 
-rotated = [rotated, repmat(XCapacitance(end, end), size(rotated,1), 1)];
+capacitance = unique(XCapacitance(:,end));
+rotated = [rotated, repmat(capacitance(1), size(rotated,1), 1)];
+middle_ind = find(rotated(:,1) >= 97 & rotated(:,1) <= 158);
+shield_ind = find(rotated(:,1) == 94 | rotated(:,1) == 161);
+
+rotated(middle_ind, end) = capacitance(2);
+rotated(shield_ind, end) = capacitance(3);
+
 XCapacitance = [XCapacitance; rotated];
+
 plot3d(EXSTRUT)
 hold on
 plot3d_cap(XCapacitance)
