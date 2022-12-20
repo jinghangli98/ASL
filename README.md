@@ -1,7 +1,7 @@
 # Arterial Spin Labeling (ASL) 
 Coil Simulation
 
-ASL Geometry
+## ASL Geometry
 
 ACRYLICS
 
