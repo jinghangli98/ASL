@@ -34,5 +34,5 @@ rotated(find(rotated(:,2) <= 162 ),:) = [];
 EZSHIELD = [EZSHIELD; rotated];
 plot3d(EZSHIELD)
 
-writematrix(EZSHIELD, './geometry/ASL_EZSHIELD.dat', 'Delimiter', ' ')
+writematrix(EZSHIELD, '../geometry/ASL_EZSHIELD.dat', 'Delimiter', ' ')
 
