@@ -2,7 +2,7 @@ clear;
 close all;
 clc;
 
-ACRYLICS = load('./nonrotated/geometry/ACRYLICS.dat');
+ACRYLICS = load('../nonrotated/geometry/ACRYLICS.dat');
 
 moving = ACRYLICS;
 
@@ -27,5 +27,5 @@ moving(:,3) = moving(:,3) - move_z;
 ACRYLICS = [ACRYLICS; moving];
 plot3d(ACRYLICS)
 
-writematrix(ACRYLICS, './geometry/ASL_ACRYLICS.dat', 'Delimiter', ' ')
+writematrix(ACRYLICS, '../geometry/ASL_ACRYLICS.dat', 'Delimiter', ' ')
 

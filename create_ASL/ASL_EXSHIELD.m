@@ -2,7 +2,7 @@ clear;
 close all;
 clc;
 
-EXSHIELD = load('./nonrotated/geometry/EXSHIELD.dat');
+EXSHIELD = load('../nonrotated/geometry/EXSHIELD.dat');
 EXSHIELD(find(EXSHIELD(:,1) == 0 ),:) = [];
 
 EXSHIELD_moving = EXSHIELD;
@@ -40,5 +40,5 @@ EXSHIELD = [EXSHIELD; rotated];
 EXSHIELD = double(EXSHIELD);
 plot3d(EXSHIELD)
 
-writematrix(EXSHIELD, './geometry/ASL_EXSHIELD.dat', 'Delimiter', ' ')
+writematrix(EXSHIELD, '../geometry/ASL_EXSHIELD.dat', 'Delimiter', ' ')
 
