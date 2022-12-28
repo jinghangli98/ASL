@@ -1,4 +1,3 @@
-
 function plot3d_cap(matrix)
 
 x = matrix(:,1);
