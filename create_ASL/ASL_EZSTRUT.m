@@ -4,7 +4,6 @@ clc;
 
 EZSTRUT = load('../nonrotated/geometry/EZSTRUT.dat');
 EZSTRUT_moving = EZSTRUT;
-
 % moving(find(moving(:,2) <= 160), :) = [];
 EZSTRUT_moving(find(EZSTRUT_moving(:,3) >= 162), :) = [];
 
