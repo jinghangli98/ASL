@@ -1,14 +1,28 @@
 # Arterial Spin Labeling (ASL) 
 Coil Simulation
 
-### ASL Geometry
+## ASL Coil Geometry
 
-ACRYLICS
+**ACRYLICS.dat**
 
-EXSHIELD
+**EXSHIELD.dat** |
+**EYSHIELD.dat** |
+**EZSHIELD.dat** |
 
-EXSTRUT
+**EXSTRUT.dat** |
+**EYSTRUT.dat** |
+**EZSTRUT.dat** |
 
-XCapacitance
+**XCapacitance.dat** |
+**YCapacitance.dat** |
+**ZCapacitance.dat** |
+
+## MISC
+
+**LengthsQ2.dat** 
+
+> #EXSHIELD <br>#EYSHIELD <br>#EZSHIELD <br>#EXSTRUT <br>#EYSTRUT <br>#EZSTRUT <br>#transsimp <br>#transsrc 
+<br>#XCapacitance <br>#YCapacitance <br>#ZCapacitance
+
 
 
