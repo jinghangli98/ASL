@@ -1,5 +1,5 @@
 # Arterial Spin Labeling (ASL) 
-Coil Simulation
+ASL Coil Simulation
 
 ## ASL Coil Geometry
 
