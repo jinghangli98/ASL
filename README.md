@@ -24,5 +24,12 @@ Coil Simulation
 > #EXSHIELD <br>#EYSHIELD <br>#EZSHIELD <br>#EXSTRUT <br>#EYSTRUT <br>#EZSTRUT <br>#transsimp <br>#transsrc 
 <br>#XCapacitance <br>#YCapacitance <br>#ZCapacitance
 
+**model.dat**
+
+**Transimp.dat**
+
+**Transsrc.dat**
+
+
 
 
