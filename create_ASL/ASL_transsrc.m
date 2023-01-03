@@ -28,4 +28,4 @@ plot3d_src(transsrc)
 hold on
 plot3d_src(asl_transsrc)
 
-writematrix(asl_EXSTRUT, '../geometry/ASL_transsrc.dat', 'Delimiter', ' ')
+writematrix(asl_transsrc, '../geometry/ASL_transsrc.dat', 'Delimiter', ' ')
