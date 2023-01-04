@@ -28,6 +28,8 @@ rotated = [x + (219-183), y + (159 - 116), z - (72  + 6)];
 
 rotated(find(rotated(:,2) <= 159), :) = [];
 EZSTRUT = [EZSTRUT; rotated];
+EZSTRUT(:,3) = EZSTRUT(:,3) + (721-235);
+
 plot3d(EZSTRUT)
 
 writematrix(EZSTRUT, '../geometry/ASL_EZSTRUT.dat', 'Delimiter', ' ')

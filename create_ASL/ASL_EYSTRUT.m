@@ -43,6 +43,7 @@ rotated(find(rotated(:,2) <= 161 ),:) = [];
 % moving(:,3) = moving(:,3) - move_z;
 
 EYSTRUT = [EYSTRUT; rotated];
+EYSTRUT(:,3) = EYSTRUT(:,3) + (721-235);
 
 plot3d(EYSTRUT)
 

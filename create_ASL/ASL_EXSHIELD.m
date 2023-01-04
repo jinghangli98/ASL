@@ -38,6 +38,7 @@ rotated(find(rotated(:,2) <= 161 ),:) = [];
 
 EXSHIELD = [EXSHIELD; rotated];
 EXSHIELD = double(EXSHIELD);
+EXSHIELD(:,3) = EXSHIELD(:,3) + (721-235);
 plot3d(EXSHIELD)
 
 writematrix(EXSHIELD, '../geometry/ASL_EXSHIELD.dat', 'Delimiter', ' ')

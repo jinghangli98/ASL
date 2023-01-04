@@ -25,6 +25,7 @@ moving(:,3) = moving(:,3) - move_z;
 
 
 ACRYLICS = [ACRYLICS; moving];
+ACRYLICS(:,3) = ACRYLICS(:,3) + (721-235);
 plot3d(ACRYLICS)
 
 writematrix(ACRYLICS, '../geometry/ASL_ACRYLICS.dat', 'Delimiter', ' ')

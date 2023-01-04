@@ -28,10 +28,9 @@ rotated = imwarp(moving, Rin, tform);
 rotated = [x + (218-182), y + (219-176), z-76-6];
 rotated(find(rotated(:,2) <= 161 ),:) = [];
 
-plot3d(EXSTRUT)
-hold on
-plot3d(rotated)
 EXSTRUT = [EXSTRUT; rotated];
+EXSTRUT(:,3) = EXSTRUT(:,3) + (721-235);
+plot3d(EXSTRUT)
 
 writematrix(EXSTRUT, '../geometry/ASL_EXSTRUT.dat', 'Delimiter', ' ')
 
