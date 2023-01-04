@@ -5,7 +5,7 @@ lightBlue = [0 0.4470 0.7410];
 XCapacitance = load('../nonrotated/geometry/XCapacitance.dat');
 EXSHIELD = load('../nonrotated/geometry/EXSHIELD.dat');
 EXSTRUT = load('../nonrotated/geometry/EXSTRUT.dat');
-
+ASL_EXSTRUT = load('../geometry/ASL_EXSTRUT.dat')
 
 XCapacitance_moving = XCapacitance(:,1:3);
 % XCapacitance_moving = [EXSTRUT; XCapacitance_moving];
@@ -43,8 +43,9 @@ rotated(middle_ind, end) = capacitance(2);
 rotated(shield_ind, end) = capacitance(3);
 
 XCapacitance = [XCapacitance; rotated];
+XCapacitance(:,3) = XCapacitance(:,3) + (721-235);
 
-plot3d(EXSTRUT)
+plot3d(ASL_EXSTRUT)
 hold on
 plot3d_cap(XCapacitance)
 

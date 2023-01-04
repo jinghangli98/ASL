@@ -41,6 +41,8 @@ rotated(middle_ind, end) = capacitance(2);
 
 
 ZCapacitance = rotated;
+ZCapacitance(:,3) = ZCapacitance(:,3) + (721-235);
+
 
 plot3d(ASL_EZSTRUT)
 hold on
