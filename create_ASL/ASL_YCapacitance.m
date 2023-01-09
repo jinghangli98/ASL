@@ -47,12 +47,14 @@ rotated = [rotated, repmat(capacitance(1), size(rotated,1), 1)];
 % rotated(shield_ind, end) = capacitance(3);
 
 YCapacitance = [YCapacitance; rotated];
-YCapacitance(:,3) = YCapacitance(:,3) + (721-235);
+YCapacitance(:,3) = YCapacitance(:,3) +  (365-240);
+% YCapacitance(:,3) = YCapacitance(:,3);
+
 
 EYSTRUT = load('../geometry/ASL_EYSTRUT.dat');
 plot3d(EYSTRUT)
 hold on
 plot3d_cap(YCapacitance)
 
-writematrix(YCapacitance, '../geometry/ASL_YCapacitance.dat', 'Delimiter', ' ')
+writematrix(YCapacitance, '../geometry/YCapacitance.dat', 'Delimiter', ' ')
 

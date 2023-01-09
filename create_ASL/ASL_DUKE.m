@@ -6,6 +6,7 @@ duke = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsbu
 duke(find(duke(:,3) <= 400),:) = [];
 duke(:,1) = duke(:,1) - 31;
 duke(:,2) = duke(:,2) - 31;
+duke(:,3) = duke(:,3) - 361;
 
 plot3d(duke)
-writematrix(duke, '../geometry/ASL_DUKE.dat', 'Delimiter', ' ')
+writematrix(duke, '../geometry/model.dat', 'Delimiter', ' ')

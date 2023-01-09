@@ -43,9 +43,11 @@ rotated(find(rotated(:,2) <= 161 ),:) = [];
 % moving(:,3) = moving(:,3) - move_z;
 
 EYSTRUT = [EYSTRUT; rotated];
-EYSTRUT(:,3) = EYSTRUT(:,3) + (721-235);
+EYSTRUT(:,3) = EYSTRUT(:,3) +  (365-240);
+% EYSTRUT(:,3) = EYSTRUT(:,3);
+
 
 plot3d(EYSTRUT)
 
-writematrix(EYSTRUT, '../geometry/ASL_EYSTRUT.dat', 'Delimiter', ' ')
+writematrix(EYSTRUT, '../geometry/EYSTRUT.dat', 'Delimiter', ' ')
 

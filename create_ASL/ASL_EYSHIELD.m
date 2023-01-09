@@ -37,9 +37,10 @@ rotated(find(rotated(:,2) <= 161 ),:) = [];
 % plot3d(rotated)
 
 EYSHIELD = [EYSHIELD; rotated];
-EYSHIELD(:,3) = EYSHIELD(:,3) + (721-235);
+EYSHIELD(:,3) = EYSHIELD(:,3) +  (365-240);
+% EYSHIELD(:,3) = EYSHIELD(:,3);
 
 plot3d(EYSHIELD)
 
-writematrix(EYSHIELD, '../geometry/ASL_EYSHIELD.dat', 'Delimiter', ' ')
+writematrix(EYSHIELD, '../geometry/EYSHIELD.dat', 'Delimiter', ' ')
 

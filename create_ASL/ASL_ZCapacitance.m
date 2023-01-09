@@ -41,12 +41,13 @@ rotated(middle_ind, end) = capacitance(2);
 
 
 ZCapacitance = rotated;
-ZCapacitance(:,3) = ZCapacitance(:,3) + (721-235);
+ZCapacitance(:,3) = ZCapacitance(:,3) +  (365-240);
+% ZCapacitance(:,3) = ZCapacitance(:,3);
 
 
 plot3d(ASL_EZSTRUT)
 hold on
 plot3d_cap(ZCapacitance)
 
-writematrix(ZCapacitance, '../geometry/ASL_ZCapacitance.dat', 'Delimiter', ' ')
+writematrix(ZCapacitance, '../geometry/ZCapacitance.dat', 'Delimiter', ' ')
 

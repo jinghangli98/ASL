@@ -22,7 +22,8 @@ asl_transsrc = [asl_transsrc_mid; asl_transsrc];
 asl_transsrc(:,3) = asl_transsrc(:,3) - (76 + 76 + 2);
 
 asl_transsrc = [asl_transsrc; transsrc];
-asl_transsrc(:,3) = asl_transsrc(:,3) + (721-235);
+asl_transsrc(:,3) = asl_transsrc(:,3) +  (365-240);
+% asl_transsrc(:,3) = asl_transsrc(:,3);
 
 plot3d(asl_EXSTRUT)
 hold on
@@ -30,4 +31,4 @@ hold on
 % hold on
 plot3d_src(asl_transsrc)
 
-writematrix(asl_transsrc, '../geometry/ASL_transsrc.dat', 'Delimiter', ' ')
+writematrix(asl_transsrc, '../geometry/Transsrc.dat', 'Delimiter', ' ')

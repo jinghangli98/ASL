@@ -29,10 +29,11 @@ rotated = [x + (218-182), y + (219-176), z-76-6];
 rotated(find(rotated(:,2) <= 161 ),:) = [];
 
 EXSTRUT = [EXSTRUT; rotated];
-EXSTRUT(:,3) = EXSTRUT(:,3) + (721-235);
+EXSTRUT(:,3) = EXSTRUT(:,3) + (365-240);
+% EXSTRUT(:,3) = EXSTRUT(:,3);
 plot3d(EXSTRUT)
 
-writematrix(EXSTRUT, '../geometry/ASL_EXSTRUT.dat', 'Delimiter', ' ')
+writematrix(EXSTRUT, '../geometry/EXSTRUT.dat', 'Delimiter', ' ')
 
 % 
 % EXSTRUT_moving(find(EXSTRUT_moving(:,1) >=213),:) = [];

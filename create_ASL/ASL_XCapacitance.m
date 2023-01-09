@@ -5,7 +5,8 @@ lightBlue = [0 0.4470 0.7410];
 XCapacitance = load('../nonrotated/geometry/XCapacitance.dat');
 EXSHIELD = load('../nonrotated/geometry/EXSHIELD.dat');
 EXSTRUT = load('../nonrotated/geometry/EXSTRUT.dat');
-ASL_EXSTRUT = load('../geometry/ASL_EXSTRUT.dat')
+ASL_EXSHIELD = load('../geometry/EXSHIELD.dat');
+ASL_EZSHIELD = load('../geometry/EZSHIELD.dat');
 
 XCapacitance_moving = XCapacitance(:,1:3);
 % XCapacitance_moving = [EXSTRUT; XCapacitance_moving];
@@ -43,11 +44,15 @@ rotated(middle_ind, end) = capacitance(2);
 rotated(shield_ind, end) = capacitance(3);
 
 XCapacitance = [XCapacitance; rotated];
-XCapacitance(:,3) = XCapacitance(:,3) + (721-235);
+XCapacitance(:,3) = XCapacitance(:,3) + (365-240);
+% XCapacitance(:,3) = XCapacitance(:,3);
 
-plot3d(ASL_EXSTRUT)
+
+plot3d(ASL_EXSHIELD)
 hold on
 plot3d_cap(XCapacitance)
+hold on 
+plot3d(ASL_EZSHIELD)
 
-writematrix(XCapacitance, '../geometry/ASL_XCapacitance.dat', 'Delimiter', ' ')
+writematrix(XCapacitance, '../geometry/XCapacitance.dat', 'Delimiter', ' ')
 
