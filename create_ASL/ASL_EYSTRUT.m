@@ -2,7 +2,7 @@ clear;
 close all;
 clc;
 
-EYSTRUT = load('../nonrotated/geometry/EYSTRUT.dat');
+EYSTRUT = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/EYSTRUT.dat');
 EYSTRUT_moving = EYSTRUT;
 
 % moving(find(moving(:,2) <= 160), :) = [];
@@ -49,5 +49,5 @@ EYSTRUT(:,3) = EYSTRUT(:,3) +  (365-240);
 
 plot3d(EYSTRUT)
 
-writematrix(EYSTRUT, '../geometry/EYSTRUT.dat', 'Delimiter', ' ')
+writematrix(EYSTRUT, '/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/geometry/EYSTRUT.dat', 'Delimiter', ' ')
 

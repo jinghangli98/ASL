@@ -2,9 +2,9 @@ clear;
 close all;
 clc;
 
-EXSTRUT = load('../nonrotated/geometry/EXSTRUT.dat');
-asl_EXSTRUT = load('../geometry/ASL_EXSTRUT.dat');
-transsrc = load('../nonrotated/geometry/Transsrc.dat');
+EXSTRUT = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/EXSTRUT.dat');
+asl_EXSTRUT = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/geometry/EXSTRUT.dat');
+transsrc = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/Transsrc.dat');
 asl_transsrc = transsrc;
 EXSTRUT_moving = EXSTRUT;
 EXSTRUT_moving = [EXSTRUT_moving, zeros(size(EXSTRUT_moving))];
@@ -31,4 +31,4 @@ hold on
 % hold on
 plot3d_src(asl_transsrc)
 
-writematrix(asl_transsrc, '../geometry/Transsrc.dat', 'Delimiter', ' ')
+writematrix(asl_transsrc, '/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/geometry/Transsrc.dat', 'Delimiter', ' ')

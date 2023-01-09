@@ -2,7 +2,7 @@ clear;
 close all;
 clc;
 
-EZSTRUT = load('../nonrotated/geometry/EZSTRUT.dat');
+EZSTRUT = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/EZSTRUT.dat');
 EZSTRUT_moving = EZSTRUT;
 % moving(find(moving(:,2) <= 160), :) = [];
 EZSTRUT_moving(find(EZSTRUT_moving(:,3) >= 162), :) = [];
@@ -33,5 +33,5 @@ EZSTRUT(:,3) = EZSTRUT(:,3) +  (365-240);
 
 plot3d(EZSTRUT)
 
-writematrix(EZSTRUT, '../geometry/EZSTRUT.dat', 'Delimiter', ' ')
+writematrix(EZSTRUT, '/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/geometry/EZSTRUT.dat', 'Delimiter', ' ')
 

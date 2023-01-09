@@ -2,7 +2,7 @@ clear;
 close all;
 clc;
 
-EXSTRUT = load('../nonrotated/geometry/EXSTRUT.dat');
+EXSTRUT = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/EXSTRUT.dat');
 EXSTRUT_moving = EXSTRUT;
 
 EXSTRUT_moving(find(EXSTRUT_moving(:,3) >= 172),:) = [];
@@ -33,7 +33,7 @@ EXSTRUT(:,3) = EXSTRUT(:,3) + (365-240);
 % EXSTRUT(:,3) = EXSTRUT(:,3);
 plot3d(EXSTRUT)
 
-writematrix(EXSTRUT, '../geometry/EXSTRUT.dat', 'Delimiter', ' ')
+writematrix(EXSTRUT, '/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/geometry/EXSTRUT.dat', 'Delimiter', ' ')
 
 % 
 % EXSTRUT_moving(find(EXSTRUT_moving(:,1) >=213),:) = [];

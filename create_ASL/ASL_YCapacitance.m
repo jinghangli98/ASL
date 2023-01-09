@@ -2,9 +2,9 @@ clear;
 close all;
 clc;
 lightBlue = [0 0.4470 0.7410];
-YCapacitance = load('../nonrotated/geometry/YCapacitance.dat');
-EYSHIELD = load('../nonrotated/geometry/EYSHIELD.dat');
-EYSTRUT = load('../nonrotated/geometry/EYSTRUT.dat');
+YCapacitance = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/YCapacitance.dat');
+EYSHIELD = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/EYSHIELD.dat');
+EYSTRUT = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/EYSTRUT.dat');
 
 
 YCapacitance_moving = YCapacitance(:,1:3);
@@ -51,10 +51,10 @@ YCapacitance(:,3) = YCapacitance(:,3) +  (365-240);
 % YCapacitance(:,3) = YCapacitance(:,3);
 
 
-EYSTRUT = load('../geometry/ASL_EYSTRUT.dat');
+EYSTRUT = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/geometry/EYSTRUT.dat');
 plot3d(EYSTRUT)
 hold on
 plot3d_cap(YCapacitance)
 
-writematrix(YCapacitance, '../geometry/YCapacitance.dat', 'Delimiter', ' ')
+writematrix(YCapacitance, '/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/geometry/YCapacitance.dat', 'Delimiter', ' ')
 

@@ -2,7 +2,7 @@ clear;
 close all;
 clc;
 
-ACRYLICS = load('../nonrotated/geometry/ACRYLICS.dat');
+ACRYLICS = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/ACRYLICS.dat');
 
 moving = ACRYLICS;
 
@@ -30,5 +30,5 @@ ACRYLICS(:,3) = ACRYLICS(:,3) + (365-240);
 
 plot3d(ACRYLICS)
 
-writematrix(ACRYLICS, '../geometry/ACRYLICS.dat', 'Delimiter', ' ')
+writematrix(ACRYLICS, '/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/geometry/ACRYLICS.dat', 'Delimiter', ' ')
 

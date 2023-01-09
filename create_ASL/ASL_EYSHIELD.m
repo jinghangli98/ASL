@@ -2,7 +2,7 @@ clear;
 close all;
 clc;
 
-EYSHIELD = load('../nonrotated/geometry/EYSHIELD.dat');
+EYSHIELD = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/EYSHIELD.dat');
 
 EYSHIELD(find(EYSHIELD(:,1) == 0 ),:) = [];
 
@@ -42,5 +42,5 @@ EYSHIELD(:,3) = EYSHIELD(:,3) +  (365-240);
 
 plot3d(EYSHIELD)
 
-writematrix(EYSHIELD, '../geometry/EYSHIELD.dat', 'Delimiter', ' ')
+writematrix(EYSHIELD, '/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/geometry/EYSHIELD.dat', 'Delimiter', ' ')
 

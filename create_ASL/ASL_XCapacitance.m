@@ -2,11 +2,11 @@ clear;
 close all;
 clc;
 lightBlue = [0 0.4470 0.7410];
-XCapacitance = load('../nonrotated/geometry/XCapacitance.dat');
-EXSHIELD = load('../nonrotated/geometry/EXSHIELD.dat');
-EXSTRUT = load('../nonrotated/geometry/EXSTRUT.dat');
-ASL_EXSHIELD = load('../geometry/EXSHIELD.dat');
-ASL_EZSHIELD = load('../geometry/EZSHIELD.dat');
+XCapacitance = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/XCapacitance.dat');
+EXSHIELD = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/EXSHIELD.dat');
+EXSTRUT = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/EXSTRUT.dat');
+ASL_EXSHIELD = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/geometry/EXSHIELD.dat');
+ASL_EZSHIELD = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/geometry/EZSHIELD.dat');
 
 XCapacitance_moving = XCapacitance(:,1:3);
 % XCapacitance_moving = [EXSTRUT; XCapacitance_moving];
@@ -54,5 +54,5 @@ plot3d_cap(XCapacitance)
 hold on 
 plot3d(ASL_EZSHIELD)
 
-writematrix(XCapacitance, '../geometry/XCapacitance.dat', 'Delimiter', ' ')
+writematrix(XCapacitance, '/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/geometry/XCapacitance.dat', 'Delimiter', ' ')
 

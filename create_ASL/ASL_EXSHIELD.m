@@ -2,7 +2,7 @@ clear;
 close all;
 clc;
 
-EXSHIELD = load('../nonrotated/geometry/EXSHIELD.dat');
+EXSHIELD = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/EXSHIELD.dat');
 EXSHIELD(find(EXSHIELD(:,1) == 0 ),:) = [];
 
 EXSHIELD_moving = EXSHIELD;
@@ -43,5 +43,5 @@ EXSHIELD(:,3) = EXSHIELD(:,3) +  (365-240);
 
 plot3d(EXSHIELD)
 
-writematrix(EXSHIELD, '../geometry/EXSHIELD.dat', 'Delimiter', ' ')
+writematrix(EXSHIELD, '/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/geometry/EXSHIELD.dat', 'Delimiter', ' ')
 

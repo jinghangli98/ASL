@@ -2,7 +2,7 @@ clear;
 close all;
 clc;
 
-EZSHIELD = load('../nonrotated/geometry/EZSHIELD.dat');
+EZSHIELD = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/EZSHIELD.dat');
 EZSHIELD(find(EZSHIELD(:,1) == 0 ),:) = [];
 EZSHIELD_moving = EZSHIELD;
 
@@ -37,5 +37,5 @@ EZSHIELD(:,3) = EZSHIELD(:,3) +  (365-240);
 
 plot3d(EZSHIELD)
 
-writematrix(EZSHIELD, '../geometry/EZSHIELD.dat', 'Delimiter', ' ')
+writematrix(EZSHIELD, '/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/geometry/EZSHIELD.dat', 'Delimiter', ' ')
 

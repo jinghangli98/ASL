@@ -9,4 +9,4 @@ duke(:,2) = duke(:,2) - 31;
 duke(:,3) = duke(:,3) - 361;
 
 plot3d(duke)
-writematrix(duke, '../geometry/model.dat', 'Delimiter', ' ')
+writematrix(duke, '/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/geometry/model.dat', 'Delimiter', ' ')

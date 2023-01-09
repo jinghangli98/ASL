@@ -2,10 +2,10 @@ clear;
 close all;
 clc;
 lightBlue = [0 0.4470 0.7410];
-ZCapacitance = load('../nonrotated/geometry/ZCapacitance.dat');
-EZSHIELD = load('../nonrotated/geometry/EZSHIELD.dat');
-EZSTRUT = load('../nonrotated/geometry/EZSTRUT.dat');
-ASL_EZSTRUT = load('../geometry/ASL_EZSTRUT.dat');
+ZCapacitance = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/ZCapacitance.dat');
+EZSHIELD = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/EZSHIELD.dat');
+EZSTRUT = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/nonrotated/geometry/EZSTRUT.dat');
+ASL_EZSTRUT = load('/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/geometry/EZSTRUT.dat');
 
 
 ZCapacitance_moving = ZCapacitance(:,1:3);
@@ -49,5 +49,5 @@ plot3d(ASL_EZSTRUT)
 hold on
 plot3d_cap(ZCapacitance)
 
-writematrix(ZCapacitance, '../geometry/ZCapacitance.dat', 'Delimiter', ' ')
+writematrix(ZCapacitance, '/Users/jinghangli/Library/CloudStorage/OneDrive-UniversityofPittsburgh/09-ASL-Sim/geometry/ZCapacitance.dat', 'Delimiter', ' ')
 
