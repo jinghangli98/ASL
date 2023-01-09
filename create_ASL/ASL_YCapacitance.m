@@ -31,7 +31,7 @@ rotated = imwarp(moving, Rin, tform);
 
 
 % rotated = [x + 36, y + (161-121) , z - (76 + 6)];
-rotated = [x + (172-130), y + (214-174) , z-76-6];
+rotated = [x + (172-130), y + (214-174) , z-76]; %minus additional 6 cell in z if want to seperate
 rotated(find(rotated(:,2) <= 165 ),:) = [];
 
 % plot3d(YCapacitance_moving)

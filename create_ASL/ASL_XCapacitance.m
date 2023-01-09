@@ -32,7 +32,7 @@ rotated = imwarp(moving, Rin, tform);
 
 
 % rotated = [x + 36, y + (219-176), z-76-6];
-rotated = [x + 36 + (99-95), y + (219-176) + (213-173), z-76-6];
+rotated = [x + 36 + (99-95), y + (219-176) + (213-173), z-76]; %minus additional 6 cell in z if want to seperate
 rotated(find(rotated(:,2) <= 161 ),:) = [];
 
 capacitance = unique(XCapacitance(:,end));

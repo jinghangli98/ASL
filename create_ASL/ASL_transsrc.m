@@ -19,7 +19,7 @@ asl_transsrc_mid(:,3) = asl_transsrc_mid(:,3) - (221-214);
 asl_transsrc(find(asl_transsrc(:,1) >=97 & asl_transsrc(:,1) <= 158), :) = [];
 
 asl_transsrc = [asl_transsrc_mid; asl_transsrc];
-asl_transsrc(:,3) = asl_transsrc(:,3) - (76 + 76 + 2);
+asl_transsrc(:,3) = asl_transsrc(:,3) - 76 - 72; %minus additional 6 cell in z if want to seperate
 
 asl_transsrc = [asl_transsrc; transsrc];
 asl_transsrc(:,3) = asl_transsrc(:,3) +  (365-240);

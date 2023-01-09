@@ -29,7 +29,7 @@ Rin.YWorldLimits = Rin.YWorldLimits-mean(Rin.YWorldLimits);
 Rin.ZWorldLimits = Rin.ZWorldLimits-mean(Rin.ZWorldLimits);
 rotated = imwarp(moving, Rin, tform);
 [x,y,z] = ind2sub(size(rotated), find(rotated ~=0));
-rotated = [x + (213 - 171), y + (213 - 155), z-72-6];
+rotated = [x + (213 - 171), y + (213 - 155), z-72]; %minus additional 6 cell in z if want to seperate
 rotated(find(rotated(:,2) <= 161 ),:) = [];
 
 

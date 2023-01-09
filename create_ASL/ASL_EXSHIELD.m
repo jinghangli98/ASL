@@ -32,7 +32,7 @@ rotated = imwarp(moving, Rin, tform);
 
 [x,y,z] = ind2sub(size(rotated), find(rotated ~=0));
 
-rotated = [x + (30-1), y + (226-190) , z-78-6];
+rotated = [x + (30-1), y + (226-190) , z-78]; %minus additional 6 cell in z if want to seperate
 rotated(find(rotated(:,2) <= 161 ),:) = [];
 
 

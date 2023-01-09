@@ -20,7 +20,7 @@ moving(find(moving(:,1) <= 160 & moving(:,1) >= 95), :) = [];
 
 moving = [moving; middle_piece];
 
-move_z = 71 + 71 + 6; 
+move_z = 71 + 71;  %plus additional 6 cell in z if want to seperate
 moving(:,3) = moving(:,3) - move_z;
 
 
